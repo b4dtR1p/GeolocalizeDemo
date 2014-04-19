@@ -1,0 +1,143 @@
+/* ==========================================================================
+   0. Includes - Ground zero
+   ========================================================================== */
+
+@import url(normalize.css);
+
+/* ==========================================================================
+   Icons - Sets up the icon font and respective classes
+   ========================================================================== */
+
+/* Import the font file with the icons in it */
+@font-face {
+    font-family: 'icons';
+    src:url('../fonts/icons.eot');
+    src:url('../fonts/icons.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/icons.woff') format('woff'),
+        url('../fonts/icons.ttf') format('truetype'),
+        url('../fonts/icons.svg#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply these base styles to all icons */
+.icon-twitter, .icon-google-plus {
+    font-family: 'icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+}
+
+/* Each icon is created by inserting the corret character into the 
+   content of the :before pseudo element. Like a boss. */
+
+.icon-twitter:before {
+    content: "\e002";
+    font-size: 1.1em;
+}
+.icon-google-plus:before {
+    content: "\e003";
+}
+
+/* ==========================================================================
+   Utilities - These things get used a lot
+   ========================================================================== */
+
+/* Hides shit */
+.hidden {
+    text-indent: -9999px;
+    visibility: hidden;
+    display: none;
+}
+
+/* Creates a responsive wrapper that makes our content scale nicely */
+.inner {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Centres vertically yo. (IE8+) */
+.vertical {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+html, body {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+
+#map-canvas {
+    height: 88%;
+    margin: 1px;
+    padding: 1px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #666;
+}
+
+#title {
+    font-size: 3rem;
+    letter-spacing: -1px;
+    font-weight: bold;
+    font-family: monoOne, monospace;
+    background: #F7FAFB;
+    color: #666;
+    text-align: center;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+.site-footer {
+    position: relative;
+    border-top: #EBF2F6 1px solid;
+    font-family: monoOne, monoOne;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    color: #666;
+    text-align: center;
+    background: #F7FAFB;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+.site-footer a {
+    color: #BBC7CC;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #50585D;
+}
+
+/* ==========================================================================
+   Media Queries - Smaller than 900px
+   ========================================================================== */
+
+@media only screen and (max-width: 900px) {
+    #title {
+        font-size: 3rem;
+        letter-spacing: -1px;
+    }
+
+/* ==========================================================================
+   Media Queries - Smaller than 500px
+   ========================================================================== */
+
+
+@media only screen and (max-width: 500px) {
+    #title {
+        font-size: 2rem;
+    }
+
+    .site-footer {
+        font-size: 1rem;
+    }
+
+}
